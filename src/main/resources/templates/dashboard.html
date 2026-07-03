@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        SecureDocs
+    </div>
+
+    <div class="nav-links">
+
+        <a th:href="@{/dashboard}">Dashboard</a>
+        <a th:href="@{/documents}">Documents</a>
+        <a th:href="@{/profile}">Profile</a>
+
+    </div>
+
+</nav>
+
+<div class="dashboard">
+
+    <div class="dashboard-header">
+
+        <h2>Welcome to SecureDocs</h2>
+
+        <p>
+
+            Successfully authenticated.
+            You now have access to the protected application.
+
+        </p>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-folder-open fa-3x"></i>
+
+            <h3>Documents</h3>
+
+            <p>
+
+                View and manage secure documents.
+
+            </p>
+
+            <br>
+
+            <a th:href="@{/documents}" class="btn btn-primary">
+
+                Open
+
+            </a>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-user fa-3x"></i>
+
+            <h3>Profile</h3>
+
+            <p>
+
+                View your user information.
+
+            </p>
+
+            <br>
+
+            <a th:href="@{/profile}" class="btn btn-primary">
+
+                Open
+
+            </a>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-right-from-bracket fa-3x"></i>
+
+            <h3>Logout</h3>
+
+            <p>
+
+                End your authenticated session.
+
+            </p>
+
+            <br>
+
+            <a href="#" class="btn btn-secondary">
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    © 2026 Secure Document Management System
+
+</footer>
+
+</body>
+
+</html>

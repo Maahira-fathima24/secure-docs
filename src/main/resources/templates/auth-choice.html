@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Authentication</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        SecureDocs
+    </div>
+
+    <div class="nav-links">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/about}">About</a>
+    </div>
+
+</nav>
+
+<section class="section">
+
+    <h2 class="section-title">
+        Choose Your Authentication Method
+    </h2>
+
+    <p style="text-align:center; margin-bottom:40px; color:#555;">
+        Select any authentication mechanism below. Regardless of your choice,
+        you will access the same secure Dashboard, Documents, and Profile pages.
+    </p>
+
+    <div class="card-container">
+
+        <!-- HTTP BASIC -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-key fa-3x"></i>
+
+            <h3>HTTP Basic Authentication</h3>
+
+            <p>
+
+                Authenticate using the browser's built-in
+                username and password dialog.
+
+            </p>
+
+            <br>
+
+            <a th:href="@{/dashboard}" class="btn btn-primary">
+                Continue
+            </a>
+
+        </div>
+
+        <!-- SESSION -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-user-lock fa-3x"></i>
+
+            <h3>Session Authentication</h3>
+
+            <p>
+
+                Login using a web form.
+                The server maintains your authenticated session.
+
+            </p>
+
+            <br>
+
+            <a th:href="@{/dashboard}" class="btn btn-primary">
+                Continue
+            </a>
+
+        </div>
+
+        <!-- JWT -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-shield-halved fa-3x"></i>
+
+            <h3>JWT Authentication</h3>
+
+            <p>
+
+                Login to receive a JWT token and access
+                secured resources without server-side sessions.
+
+            </p>
+
+            <br>
+
+            <a th:href="@{/dashboard}" class="btn btn-primary">
+                Continue
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 Secure Document Management System
+
+</footer>
+
+</body>
+
+</html>

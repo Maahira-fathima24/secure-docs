@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        SecureDocs
+    </div>
+
+    <div class="nav-links">
+        <a th:href="@{/dashboard}">Dashboard</a>
+        <a th:href="@{/documents}">Documents</a>
+        <a th:href="@{/profile}">Profile</a>
+    </div>
+
+</nav>
+
+<section class="section">
+
+    <h2 class="section-title">
+        Secure Documents
+    </h2>
+
+    <table class="doc-table">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Document Name</th>
+            <th>Owner</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>Employee Handbook.pdf</td>
+            <td>Admin</td>
+            <td>Available</td>
+            <td>
+                <button class="btn btn-primary">View</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Salary Report.xlsx</td>
+            <td>Manager</td>
+            <td>Restricted</td>
+            <td>
+                <button class="btn btn-primary">View</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Security Policy.pdf</td>
+            <td>Admin</td>
+            <td>Available</td>
+            <td>
+                <button class="btn btn-primary">View</button>
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<footer>
+
+    © 2026 Secure Document Management System
+
+</footer>
+
+</body>
+
+</html>

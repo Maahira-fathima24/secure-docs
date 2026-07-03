@@ -36,6 +36,19 @@ public class SecurityConfig {
                 // Authorization Rules
                 .authorizeHttpRequests(auth -> auth
 
+
+                        // Frontend pages
+                        .requestMatchers(
+                                "/",
+                                "/about",
+                                "/auth-choice",
+                                "/dashboard",
+                                "/profile",
+                                "/documents",
+                                "/css/**",
+                                "/js/**",
+                                "/images/**"
+                        ).permitAll()
                         // Login endpoint
                         .requestMatchers("/jwt/login").permitAll()
 

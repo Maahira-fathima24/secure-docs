@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SecureDocs</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">SecureDocs</div>
+
+    <div class="nav-links">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/about}">About</a>
+        <a th:href="@{/auth-choice}">Authentication</a>
+    </div>
+</nav>
+
+<section class="section">
+
+    <h2 class="section-title">
+        About This Project
+    </h2>
+
+    <div class="card">
+
+        <h3>Secure Document Management System</h3>
+
+        <p style="margin-top:20px">
+
+            This project demonstrates how Spring Security
+            supports multiple authentication mechanisms
+            within the same application.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            The same secured resources can be accessed using:
+
+        </p>
+
+        <br>
+
+        <ul style="text-align:left;line-height:2;padding-left:40px;">
+
+            <li>HTTP Basic Authentication</li>
+            <li>Session Authentication</li>
+            <li>JWT Authentication</li>
+        </ul>
+
+        <br>
+
+        <p>
+
+            It also implements Role Based Access Control
+            using ADMIN, MANAGER and EMPLOYEE roles.
+
+        </p>
+
+        <br><br>
+
+        <a th:href="@{/auth-choice}" class="btn btn-primary">
+            Continue to Authentication
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 Secure Document Management System
+
+</footer>
+
+</body>
+</html>

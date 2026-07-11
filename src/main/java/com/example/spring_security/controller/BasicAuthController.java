@@ -6,11 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BasicAuthController {
 
-    @GetMapping("/basic/login")
-    public String login() {
-        return "redirect:/basic/demo";
-    }
-
     @GetMapping("/basic/demo")
     public String demo() {
         return "basic-demo";

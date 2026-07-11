@@ -45,7 +45,8 @@
         </tr>
         </thead>
 
-        <tbody>
+        <tbody id="documentTable">
+
 
         <tr>
             <td>1</td>
@@ -88,6 +89,46 @@
     © 2026 Secure Document Management System
 
 </footer>
+
+<script>
+
+    fetch("/api/documents")
+        .then(response => response.json())
+        .then(data => {
+
+            let table = document.getElementById("documentTable");
+
+            data.forEach((doc,index)=>{
+
+                table.innerHTML += `
+        <tr>
+
+            <td>${index+1}</td>
+
+            <td>${doc.title}</td>
+
+            <td>System</td>
+
+            <td>Available</td>
+
+            <td>
+
+                <button class="btn btn-primary">
+
+                    View
+
+                </button>
+
+            </td>
+
+        </tr>
+        `;
+
+            });
+
+        });
+
+</script>
 
 </body>
 

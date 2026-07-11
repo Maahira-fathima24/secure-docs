@@ -37,12 +37,20 @@
 
     <div class="dashboard-header">
 
-        <h2>Welcome to SecureDocs</h2>
+        <h2>
+            Welcome,
+            <span id="username">Loading...</span>
+        </h2>
 
         <p>
 
-            Successfully authenticated.
-            You now have access to the protected application.
+            You are logged in as
+
+            <strong id="role">Loading...</strong>
+
+            using
+
+            <strong id="authentication">Loading...</strong>
 
         </p>
 
@@ -125,6 +133,21 @@
     © 2026 Secure Document Management System
 
 </footer>
+<script>
+
+    fetch("/api/user")
+        .then(response => response.json())
+        .then(data => {
+
+            document.getElementById("username").innerText = data.username;
+
+            document.getElementById("role").innerText = data.role;
+
+            document.getElementById("authentication").innerText = data.authentication;
+
+        });
+
+</script>
 
 </body>
 
